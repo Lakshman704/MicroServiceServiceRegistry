@@ -11,5 +11,14 @@ eureka:
 server:
   port: 9090  # HTTP (Tomcat) port
 
+zuul:
+ routes:
+       products1:
+        path : /api/service1/**
+        url : http://localhost:9091/    
+       products2:
+        path : /api/service2/**
+        url : http://localhost:9092/test
+        
   
   
